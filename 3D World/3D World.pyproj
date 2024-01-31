@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>04f76313-3c40-4038-84de-f92b0fe6ab2f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>_3D_World.py</StartupFile>
+    <StartupFile>__init__.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,52 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="_3D_World.py" />
+    <Folder Include="objects\" />
+    <Folder Include="shaders\" />
+    <Folder Include="textures\" />
+    <Folder Include="textures\skybox1\" />
+    <Folder Include="textures\skybox\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="shaders\advanced_skybox.frag" />
+    <Content Include="shaders\advanced_skybox.vert" />
+    <Content Include="shaders\default.frag" />
+    <Content Include="shaders\default.vert" />
+    <Content Include="shaders\shadow_map.frag" />
+    <Content Include="shaders\shadow_map.vert" />
+    <Content Include="shaders\skybox.frag" />
+    <Content Include="shaders\skybox.vert" />
+    <Content Include="textures\img.png" />
+    <Content Include="textures\img_1.png" />
+    <Content Include="textures\img_2.png" />
+    <Content Include="textures\skybox1\back.png" />
+    <Content Include="textures\skybox1\bottom.png" />
+    <Content Include="textures\skybox1\front.png" />
+    <Content Include="textures\skybox1\left.png" />
+    <Content Include="textures\skybox1\right.png" />
+    <Content Include="textures\skybox1\skybox.png" />
+    <Content Include="textures\skybox1\top.png" />
+    <Content Include="textures\skybox\back.png" />
+    <Content Include="textures\skybox\bottom.png" />
+    <Content Include="textures\skybox\cubemap.png" />
+    <Content Include="textures\skybox\front.png" />
+    <Content Include="textures\skybox\left.png" />
+    <Content Include="textures\skybox\right.png" />
+    <Content Include="textures\skybox\top.png" />
+    <Content Include="textures\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="camera.py" />
+    <Compile Include="light.py" />
+    <Compile Include="__init__.py" />
+    <Compile Include="mesh.py" />
+    <Compile Include="model.py" />
+    <Compile Include="scene.py" />
+    <Compile Include="scene_renderer.py" />
+    <Compile Include="shader_program.py" />
+    <Compile Include="texture.py" />
+    <Compile Include="vao.py" />
+    <Compile Include="vbo.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
