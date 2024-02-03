@@ -1,0 +1,13 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl m_hobj_tet_01.001
+Ns 92.156872
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.261438 0.261438 0.261438
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\seanp\\Downloads\\3DS - Animal Crossing New Leaf - Tent\\Tex\\hobj_tent_01.png

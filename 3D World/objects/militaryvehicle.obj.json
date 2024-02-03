@@ -1,0 +1,15 @@
+{
+  "created_at": "2024-02-03T09:17:25.321228",
+  "version": "0.1",
+  "mtllibs": [
+    "militaryvehicle.mtl"
+  ],
+  "vertex_buffers": [
+    {
+      "material": "ArmyJeep",
+      "vertex_format": "T2F_N3F_V3F",
+      "byte_offset": 0,
+      "byte_length": 151488
+    }
+  ]
+}

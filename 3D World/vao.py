@@ -44,6 +44,24 @@ class VAO:
         self.vaos['plane'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['plane'])
         self.vaos['shadow_plane'] = self.get_vao(program=self.program.programs['shadow_map'],vbo=self.vbo.vbos['plane'])
 
+        self.vaos['grasspatch'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['grasspatch'])
+        self.vaos['shadow_grasspatch'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['grasspatch'])
+
+        self.vaos['tent'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['tent'])
+        self.vaos['shadow_tent'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['tent'])
+
+        self.vaos['grass'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['grass'])
+        self.vaos['shadow_grass'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['grass'])
+
+        self.vaos['militaryvehicle'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['militaryvehicle'])
+        self.vaos['shadow_militaryvehicle'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['militaryvehicle'])
+
+        self.vaos['tree'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['tree'])
+        self.vaos['shadow_tree'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['tree'])
+
+        self.vaos['treetop'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['treetop'])
+        self.vaos['shadow_treetop'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['treetop'])
+
 
     # Method to create and configure a VAO
     def get_vao(self, program, vbo):

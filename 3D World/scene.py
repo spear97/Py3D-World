@@ -47,12 +47,22 @@ class Scene:
     def add_object(self, obj):
         self.objects.append(obj)
 
+    # Method to Create a Tree with Leaves
+    def make_Tree(self, app, add, pos=(0,0,0)):
+        add(TreeBottom(app))
+        add(TreeTop(app, pos=(pos[0], pos[1]+4, pos[2])))
+
     # Method to load initial objects into the scene (e.g., floor)
     def load(self):
         app = self.app
         add = self.add_object
 
         add(Plane(app, pos=(0, -1, -10)))
+        #add(GrassPatch(app))
+        #add(Grass(app))
+        #add(Tent(app))
+        self.make_Tree(app, add, pos=(0, -0.75, 0))
+        add(Grass(app))
 
     # Method to update the scene
     def update(self):

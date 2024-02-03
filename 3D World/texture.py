@@ -56,6 +56,12 @@ class Texture:
         self.textures[2] = self.get_texture(path='textures/img_2.png')
         self.textures['skybox'] = self.get_texture_cube(dir_path='textures/skybox1/', ext='png')
         self.textures['plane'] = self.get_texture(path='textures/Untextured.png')
+        self.textures['grasspatch'] = self.get_texture(path='textures/grasspatch.png')
+        self.textures['grass'] = self.get_texture(path='textures/grass.png')
+        self.textures['tent'] = self.get_texture(path='textures/tent.png')
+        self.textures['militaryvehicle'] = self.get_texture(path='textures/militaryvehicle.png')
+        self.textures['tree'] = self.get_texture(path='textures/tree.png')
+        self.textures['treetop'] = self.get_texture(path='textures/treetop.png')
         self.textures['depth_texture'] = self.get_depth_texture()
 
     # Method to create and configure a depth texture

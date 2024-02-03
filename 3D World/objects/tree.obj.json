@@ -1,0 +1,15 @@
+{
+  "created_at": "2024-02-03T10:12:36.950220",
+  "version": "0.1",
+  "mtllibs": [
+    "tree.mtl"
+  ],
+  "vertex_buffers": [
+    {
+      "material": "tree4_obj:___Default",
+      "vertex_format": "T2F_N3F_V3F",
+      "byte_offset": 0,
+      "byte_length": 32448
+    }
+  ]
+}

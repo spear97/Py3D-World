@@ -28,6 +28,18 @@
     <Folder Include="textures\skybox\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="objects\grass.mtl" />
+    <Content Include="objects\grass.obj" />
+    <Content Include="objects\grasspatch.mtl" />
+    <Content Include="objects\grasspatch.obj" />
+    <Content Include="objects\militaryvehicle.mtl" />
+    <Content Include="objects\militaryvehicle.obj" />
+    <Content Include="objects\plane.mtl" />
+    <Content Include="objects\plane.obj" />
+    <Content Include="objects\tent.mtl" />
+    <Content Include="objects\tent.obj" />
+    <Content Include="objects\tree.mtl" />
+    <Content Include="objects\tree.obj" />
     <Content Include="shaders\advanced_skybox.frag" />
     <Content Include="shaders\advanced_skybox.vert" />
     <Content Include="shaders\default.frag" />
@@ -40,6 +52,7 @@
     <Content Include="textures\img.png" />
     <Content Include="textures\img_1.png" />
     <Content Include="textures\img_2.png" />
+    <Content Include="textures\militaryvehicle.png" />
     <Content Include="textures\skybox1\back.png" />
     <Content Include="textures\skybox1\bottom.png" />
     <Content Include="textures\skybox1\front.png" />
@@ -54,6 +67,7 @@
     <Content Include="textures\skybox\left.png" />
     <Content Include="textures\skybox\right.png" />
     <Content Include="textures\skybox\top.png" />
+    <Content Include="textures\tent.png" />
     <Content Include="textures\test.png" />
     <Content Include="textures\Untextured.png" />
   </ItemGroup>

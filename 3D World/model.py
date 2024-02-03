@@ -164,6 +164,74 @@ class Plane(ExtendedBaseModel):
         # Call the constructor of the parent class (ExtendedBaseModel) using super()
         super().__init__(app, vao_name, tex_id, pos, rot, scale)
 
+# Define a class named Grass that inherits from ExtendedBaseModel
+class Grass(ExtendedBaseModel):
+    # Constructor method to initialize the Grass object
+    def __init__(self, app, vao_name='grass', tex_id='grass',
+                 pos=(0, -0.75, 0), rot=(0, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+# Define a class named GrassPatch that inherits from ExtendedBaseModel
+class GrassPatch(ExtendedBaseModel):
+    # Constructor method to initialize the GrassPatch object
+    def __init__(self, app, vao_name='grasspatch', tex_id='grasspatch',
+                 pos=(0, -0.75, 0), rot=(0, 0, 0), scale=(0.1, 0.1, 0.1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+# Define a class named Tent that inherits from ExtendedBaseModel
+class Tent(ExtendedBaseModel):
+    # Constructor method to initialize the GrassPatch object
+    def __init__(self, app, vao_name='tent', tex_id='tent',
+                 pos=(0, -0.75, 0), rot=(0, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
+# Tree Trunk
+
+# Define a class named TreeBottom that inherits from ExtendedBaseModel
+class TreeBottom(ExtendedBaseModel):
+    # Constructor method to initialize the TreeBottom object
+    def __init__(self, app, vao_name='tree', tex_id='tree',
+                 pos=(0, -0.75, 0), rot=(0, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+# Define a class named TreeTop that inherits from ExtendedBaseModel
+class TreeTop(ExtendedBaseModel):
+    # Constructor method to initialize the TreeTop object
+    def __init__(self, app, vao_name='treetop', tex_id='treetop',
+                 pos=(0, -0.75, 0), rot=(0, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+# PalmTree
+
+# Stone A
+
+# Stone B
+
+# Stone C
+
+# Stone D
+
+# Define a class named Military Vehicle that inherits from ExtendedBaseModel
+class MilitaryVehicle(ExtendedBaseModel):
+    # Constructor method to initialize the GrassPatch object
+    def __init__(self, app, vao_name='militaryvehicle', tex_id='militaryvehicle',
+                 pos=(0, -0.75, 0), rot=(0, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+# House
+
+# Cactus
+
+# Pyramid
+
+# Camel
 
 # Cube class, inheriting from ExtendedBaseModel
 class Cube(ExtendedBaseModel):
