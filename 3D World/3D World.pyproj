@@ -28,6 +28,8 @@
     <Folder Include="textures\skybox\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="objects\cactus.mtl" />
+    <Content Include="objects\cactus.obj" />
     <Content Include="objects\grass.mtl" />
     <Content Include="objects\grass.obj" />
     <Content Include="objects\grasspatch.mtl" />
@@ -36,10 +38,20 @@
     <Content Include="objects\militaryvehicle.obj" />
     <Content Include="objects\plane.mtl" />
     <Content Include="objects\plane.obj" />
+    <Content Include="objects\smallrock.mtl" />
+    <Content Include="objects\smallrock.obj" />
+    <Content Include="objects\stone_a.mtl" />
+    <Content Include="objects\stone_a.obj" />
+    <Content Include="objects\stone_b.mtl" />
+    <Content Include="objects\stone_b.obj" />
+    <Content Include="objects\stone_c.mtl" />
+    <Content Include="objects\stone_c.obj" />
     <Content Include="objects\tent.mtl" />
     <Content Include="objects\tent.obj" />
     <Content Include="objects\tree.mtl" />
     <Content Include="objects\tree.obj" />
+    <Content Include="objects\treetrunk.mtl" />
+    <Content Include="objects\treetrunk.obj" />
     <Content Include="shaders\advanced_skybox.frag" />
     <Content Include="shaders\advanced_skybox.vert" />
     <Content Include="shaders\default.frag" />
@@ -48,6 +60,7 @@
     <Content Include="shaders\shadow_map.vert" />
     <Content Include="shaders\skybox.frag" />
     <Content Include="shaders\skybox.vert" />
+    <Content Include="textures\cactus.png" />
     <Content Include="textures\grasspatch.png" />
     <Content Include="textures\img.png" />
     <Content Include="textures\img_1.png" />
@@ -67,8 +80,13 @@
     <Content Include="textures\skybox\left.png" />
     <Content Include="textures\skybox\right.png" />
     <Content Include="textures\skybox\top.png" />
+    <Content Include="textures\smallrock.png" />
+    <Content Include="textures\stone_a.png" />
+    <Content Include="textures\stone_b.png" />
+    <Content Include="textures\stone_c.png" />
     <Content Include="textures\tent.png" />
     <Content Include="textures\test.png" />
+    <Content Include="textures\treetrunk.png" />
     <Content Include="textures\Untextured.png" />
   </ItemGroup>
   <ItemGroup>

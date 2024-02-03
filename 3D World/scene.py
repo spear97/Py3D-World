@@ -58,11 +58,7 @@ class Scene:
         add = self.add_object
 
         add(Plane(app, pos=(0, -1, -10)))
-        #add(GrassPatch(app))
-        #add(Grass(app))
-        #add(Tent(app))
-        self.make_Tree(app, add, pos=(0, -0.75, 0))
-        add(Grass(app))
+        add(Camel(app))
 
     # Method to update the scene
     def update(self):

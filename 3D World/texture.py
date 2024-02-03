@@ -62,6 +62,14 @@ class Texture:
         self.textures['militaryvehicle'] = self.get_texture(path='textures/militaryvehicle.png')
         self.textures['tree'] = self.get_texture(path='textures/tree.png')
         self.textures['treetop'] = self.get_texture(path='textures/treetop.png')
+        self.textures['cactus'] = self.get_texture(path='textures/cactus.png')
+        self.textures['treetrunk'] = self.get_texture(path='textures/treetrunk.png')
+        self.textures['smallrock'] = self.get_texture(path='textures/smallrock.png')
+        self.textures['stone_a'] = self.get_texture(path='textures/stone_a.png')
+        self.textures['stone_b'] = self.get_texture(path='textures/stone_b.png')
+        self.textures['stone_c'] = self.get_texture(path='textures/stone_c.png')
+        self.textures['camel'] = self.get_texture(path='textures/camel.png')
+        self.textures['pyramid'] = self.get_texture(path='textures/pyramid.png')
         self.textures['depth_texture'] = self.get_depth_texture()
 
     # Method to create and configure a depth texture

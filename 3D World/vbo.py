@@ -43,6 +43,14 @@ class VBO:
         self.vbos['militaryvehicle'] = MilitaryVehicleVBO(ctx)
         self.vbos['tree'] = TreeVBO(ctx)
         self.vbos['treetop'] = TreeTopVBO(ctx)
+        self.vbos['cactus'] = CactusVBO(ctx)
+        self.vbos['treetrunk'] = TreeTrunkVBO(ctx)
+        self.vbos['smallrock'] = SmallRockVBO(ctx)
+        self.vbos['stone_a'] = Stone_A_VBO(ctx)
+        self.vbos['stone_b'] = Stone_B_VBO(ctx)
+        self.vbos['stone_c'] = Stone_C_VBO(ctx)
+        self.vbos['camel'] = CamelVBO(ctx)
+        self.vbos['pyramid'] = PyramidVBO(ctx)
 
     # Method to release resources for all loaded VBOs
     def destroy(self):
@@ -102,6 +110,62 @@ class BaseVBO:
     # Method to release resources for the VBO
     def destroy(self):
         self.vbo.release()
+
+# Define a class named CactusVBO that inherits from BaseVBO
+class CactusVBO(BaseVBO):
+    # Constructor method to initialize the CactusVBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for the plane from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/cactus.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
+
+# Define a class named CamelVBO that inherits from BaseVBO
+class CamelVBO(BaseVBO):
+    # Constructor method to initialize the CamelVBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for the plane from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/camel.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
 
 # Define a class named GrassVBO that inherits from BaseVBO
 class GrassVBO(BaseVBO):
@@ -215,6 +279,146 @@ class PlaneVBO(BaseVBO):
         # Return the processed vertex data
         return vertex_data
 
+# Define a class named PyramidVBO that inherits from BaseVBO
+class PyramidVBO(BaseVBO):
+    # Constructor method to initialize the PyramidVBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for the plane from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/pyramid.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
+
+# Define a class named SmallRockVBO that inherits from BaseVBO
+class SmallRockVBO(BaseVBO):
+    # Constructor method to initialize the SmallRockVBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for the plane from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/smallrock.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
+
+# Define a class named Stone_A_VBO that inherits from BaseVBO
+class Stone_A_VBO(BaseVBO):
+    # Constructor method to initialize the Stone_A_VBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for stone_a from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/stone_a.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
+
+# Define a class named Stone_B_VBO that inherits from BaseVBO
+class Stone_B_VBO(BaseVBO):
+    # Constructor method to initialize the Stone_B_VBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for stone_a from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/stone_b.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
+
+# Define a class named Stone_C_VBO that inherits from BaseVBO
+class Stone_C_VBO(BaseVBO):
+    # Constructor method to initialize the Stone_C_VBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for stone_a from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/stone_c.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
+
 # Define a class named TentVBO that inherits from BaseVBO
 class TentVBO(BaseVBO):
     # Constructor method to initialize the TentVBO object
@@ -288,6 +492,34 @@ class TreeTopVBO(BaseVBO):
     def get_vertex_data(self):
         # Load the Wavefront .obj file representing the tree and parse its contents
         objs = pywavefront.Wavefront('objects/treetop.obj', cache=True, parse=True)
+        
+        # Extract the vertex data from the parsed object's materials
+        obj = objs.materials.popitem()[1]
+        vertex_data = obj.vertices
+        
+        # Convert the vertex data to a NumPy array with float32 data type
+        vertex_data = np.array(vertex_data, dtype='f4')
+        
+        # Return the processed vertex data
+        return vertex_data
+
+# Define a class named TreeTrunkVBO that inherits from BaseVBO
+class TreeTrunkVBO(BaseVBO):
+    # Constructor method to initialize the TreeTrunkVBO object
+    def __init__(self, app):
+        # Call the constructor of the parent class (BaseVBO) using super()
+        super().__init__(app)
+        
+        # Define the format of the vertex data (2D texture coordinates, 3D normals, 3D positions)
+        self.format = '2f 3f 3f'
+        
+        # Specify attribute names corresponding to texture coordinates, normals, and positions
+        self.attribs = ['in_texcoord_0', 'in_normal', 'in_position']
+
+    # Method to retrieve vertex data for the TreeTrunk from an external Wavefront .obj file
+    def get_vertex_data(self):
+        # Load the Wavefront .obj file representing the plane and parse its contents
+        objs = pywavefront.Wavefront('objects/treetrunk.obj', cache=True, parse=True)
         
         # Extract the vertex data from the parsed object's materials
         obj = objs.materials.popitem()[1]

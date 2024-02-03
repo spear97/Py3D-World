@@ -51,7 +51,7 @@ class Camera:
     """
 
     # Constructor
-    def __init__(self, app, position=(0, 0, 4), yaw=-90, pitch=0):
+    def __init__(self, app, position=(59, 8, -15), yaw=-180, pitch=0):
 
         # Reference to the application
         self.app = app

@@ -62,6 +62,30 @@ class VAO:
         self.vaos['treetop'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['treetop'])
         self.vaos['shadow_treetop'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['treetop'])
 
+        self.vaos['cactus'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['cactus'])
+        self.vaos['shadow_cactus'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['cactus'])
+
+        self.vaos['treetrunk'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['treetrunk'])
+        self.vaos['shadow_treetrunk'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['treetrunk'])
+
+        self.vaos['smallrock'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['smallrock'])
+        self.vaos['shadow_smallrock'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['smallrock'])
+
+        self.vaos['stone_a'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['stone_a'])
+        self.vaos['shadow_stone_a'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['stone_a'])
+
+        self.vaos['stone_b'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['stone_b'])
+        self.vaos['shadow_stone_b'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['stone_b'])
+
+        self.vaos['stone_c'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['stone_c'])
+        self.vaos['shadow_stone_c'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['stone_c'])
+
+        self.vaos['camel'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['camel'])
+        self.vaos['shadow_camel'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['camel'])
+
+        self.vaos['pyramid'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['pyramid'])
+        self.vaos['shadow_pyramid'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['pyramid'])
+
 
     # Method to create and configure a VAO
     def get_vao(self, program, vbo):

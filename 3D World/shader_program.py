@@ -48,6 +48,14 @@ class ShaderProgram:
         self.programs['militaryvehicle'] = self.get_program('default')
         self.programs['tree'] = self.get_program('default')
         self.programs['treetop'] = self.get_program('default')
+        self.programs['cactus'] = self.get_program('default')
+        self.programs['treetrunk'] = self.get_program('default')
+        self.programs['smallrock'] = self.get_program('default')
+        self.programs['stone_a'] = self.get_program('default')
+        self.programs['stone_b'] = self.get_program('default')
+        self.programs['stone_c'] = self.get_program('default')
+        self.programs['camel'] = self.get_program('default')
+        self.programs['pyramid'] = self.get_program('default')
 
     # Method to load and compile vertex and fragment shaders, then create a shader program
     def get_program(self, shader_program_name):
