@@ -36,6 +36,7 @@
     <Content Include="shaders\shadow_map.vert" />
     <Content Include="shaders\skybox.frag" />
     <Content Include="shaders\skybox.vert" />
+    <Content Include="textures\grasspatch.png" />
     <Content Include="textures\img.png" />
     <Content Include="textures\img_1.png" />
     <Content Include="textures\img_2.png" />
@@ -54,6 +55,7 @@
     <Content Include="textures\skybox\right.png" />
     <Content Include="textures\skybox\top.png" />
     <Content Include="textures\test.png" />
+    <Content Include="textures\Untextured.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="camera.py" />

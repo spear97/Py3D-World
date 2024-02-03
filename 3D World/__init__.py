@@ -122,7 +122,7 @@ class GraphicsEngine:
 # Entry point for the program
 if __name__ == '__main__':
     # Create an instance of the GraphicsEngine and run the application
-    app = GraphicsEngine()
+    app = GraphicsEngine((640, 640))
     app.run()
 
 

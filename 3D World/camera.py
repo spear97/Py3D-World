@@ -6,7 +6,7 @@ import pygame as pg  # Pygame for handling user input and window creation
 FOV = 50  # Field of view in degrees
 NEAR = 0.1  # Near clipping plane
 FAR = 100  # Far clipping plane
-SPEED = 0.005  # Movement speed
+SPEED = 0.01  # Movement speed
 SENSITIVITY = 0.04  # Mouse sensitivity
 
 # Camera class definition

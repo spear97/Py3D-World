@@ -155,6 +155,16 @@ class ExtendedBaseModel(BaseModel):
         self.program['light.Id'].write(self.app.light.Id)
         self.program['light.Is'].write(self.app.light.Is)
 
+
+# Define a class named Plane that inherits from ExtendedBaseModel
+class Plane(ExtendedBaseModel):
+    # Constructor method to initialize the Plane object
+    def __init__(self, app, vao_name='plane', tex_id='plane',
+                 pos=(0, 0, 0), rot=(-90, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+
 # Cube class, inheriting from ExtendedBaseModel
 class Cube(ExtendedBaseModel):
 

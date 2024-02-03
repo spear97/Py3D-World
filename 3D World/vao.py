@@ -37,8 +37,13 @@ class VAO:
         # Create and store VAOs for different objects with associated programs and VBOs
         self.vaos['cube'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['cube'])
         self.vaos['shadow_cube'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['cube'])
+
         self.vaos['skybox'] = self.get_vao(program=self.program.programs['skybox'], vbo=self.vbo.vbos['skybox'])
         self.vaos['advanced_skybox'] = self.get_vao(program=self.program.programs['advanced_skybox'], vbo=self.vbo.vbos['advanced_skybox'])
+
+        self.vaos['plane'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['plane'])
+        self.vaos['shadow_plane'] = self.get_vao(program=self.program.programs['shadow_map'],vbo=self.vbo.vbos['plane'])
+
 
     # Method to create and configure a VAO
     def get_vao(self, program, vbo):

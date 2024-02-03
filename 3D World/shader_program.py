@@ -43,6 +43,7 @@ class ShaderProgram:
         self.programs['skybox'] = self.get_program('skybox')
         self.programs['advanced_skybox'] = self.get_program('advanced_skybox')
         self.programs['shadow_map'] = self.get_program('shadow_map')
+        self.programs['plane'] = self.get_program('default')
 
     # Method to load and compile vertex and fragment shaders, then create a shader program
     def get_program(self, shader_program_name):

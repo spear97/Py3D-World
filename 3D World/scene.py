@@ -52,11 +52,7 @@ class Scene:
         app = self.app
         add = self.add_object
 
-        # Create a floor with a grid of cubes
-        n, s = 20, 2
-        for x in range(-n, n, s):
-            for z in range(-n, n, s):
-                add(Cube(app, pos=(x, -s, z)))
+        add(Plane(app, pos=(0, -1, -10)))
 
     # Method to update the scene
     def update(self):
