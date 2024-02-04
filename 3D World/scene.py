@@ -72,11 +72,10 @@ class Scene:
         app = self.app
         add = self.add_object
 
-        self.render_Environment1(app, add)
+        self.render_Environment3(app, add)
 
     # Method to update the scene
     def update(self):
-        #print('hello from Scene.Update')
         pass
 
     """
@@ -94,6 +93,11 @@ class Scene:
     # Get a yaw Value to rotate around the Y-Axis for
     def get_yaw(self):
         return random.randrange(0.0, 360.0)
+
+
+    """
+    Object Generators
+    """
 
     """
     Environment
@@ -167,10 +171,90 @@ class Scene:
         # Generate the Plane that will be needed for the Environment to Generate on
         add(Plane_Dirt(app, pos=(0, -1, -10), scale=(0.25, 0.25, 0.25)))
 
+        # Generate all the Patches of Grass for the Environment
+        for i in range(250):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(GrassPatch(app, pos=(x, -0.87, z), rot=(0, yaw, 0)))
+
+        # Generate all Bushes
+        for i in range(20):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(TreeTop(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
+
+        # Geneate all the Small Rocks for the Enviornment
+        for i in range(20):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(SmallRock(app, pos=(x, -0.87, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Grass for the Environment
+        for i in range(150):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Grass(app, pos=(x, -0.87, z), rot=(0, yaw, 0)))
+
+        # Generate all the Trees for the Environment
+        for i in range(20):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(TreeBottom(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
+
+        # Generate all the Stone_As for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Stone_A(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Stone_Bs for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Stone_B(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Stone_Cs for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Stone_C(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Genereate all the Military Vehicles for the Environment
+        for i in range(20):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(MilitaryVehicle(app, pos=(x, -0.75, z), rot=(0, yaw, 0)))
+
     # The Third Environment that is able to be selected to render
     def render_Environment3(self, app, add):
 
         # Generate the Plane that will be needed for the Environment to Generate on
         add(Plane_Sand(app, pos=(0, -1, -10), scale=(0.25, 0.25, 0.25)))
+
+        # Genereate all the Cacti for the Environment
+        for i in range(20):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Cactus(app, pos=(x, -0.75, z), rot=(0, yaw, 0)))
+
+        # Geneate all the Small Rocks for the Enviornment
+        for i in range(20):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(SmallRock(app, pos=(x, -0.87, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Stone_As for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Stone_A(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Stone_Bs for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Stone_B(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Stone_Cs for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Stone_C(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Pyramid for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Pyramid(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+
+        # Generate all the Stone_Cs for the Environment
+        for i in range(5):
+            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
+            add(Camel(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
 
 
