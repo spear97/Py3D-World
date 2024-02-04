@@ -2,6 +2,10 @@ import moderngl as mgl
 import numpy as np
 import glm
 
+"""
+PARENT OBJECTS
+"""
+
 class BaseModel:
 
     """
@@ -155,6 +159,9 @@ class ExtendedBaseModel(BaseModel):
         self.program['light.Id'].write(self.app.light.Id)
         self.program['light.Is'].write(self.app.light.Is)
 
+"""
+OBJECTS THAT CAN BE SPAWNED
+"""
 
 # Define a class named Plane that inherits from ExtendedBaseModel
 class Plane(ExtendedBaseModel):
@@ -300,6 +307,10 @@ class MovingCube(Cube):
 
         # Call the update method of the base class (Cube) to perform additional updates
         super().update()
+
+"""
+SKYBOXES
+"""
 
 # SkyBox class, inheriting from BaseModel
 class SkyBox(BaseModel):

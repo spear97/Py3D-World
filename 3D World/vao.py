@@ -35,57 +35,20 @@ class VAO:
         self.vaos = {}
 
         # Create and store VAOs for different objects with associated programs and VBOs
-        self.vaos['cube'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['cube'])
-        self.vaos['shadow_cube'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['cube'])
-
         self.vaos['skybox'] = self.get_vao(program=self.program.programs['skybox'], vbo=self.vbo.vbos['skybox'])
         self.vaos['advanced_skybox'] = self.get_vao(program=self.program.programs['advanced_skybox'], vbo=self.vbo.vbos['advanced_skybox'])
 
-        self.vaos['plane'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['plane'])
-        self.vaos['shadow_plane'] = self.get_vao(program=self.program.programs['shadow_map'],vbo=self.vbo.vbos['plane'])
+        #Objects that need to have vaos generated for
+        objs = ['cube', 'plane', 'grasspatch', 
+                'tent', 'grass', 'militaryvehicle', 
+                'tree', 'cactus', 'treetrunk', 
+                'smallrock', 'stone_a', 'stone_b', 
+                'stone_c', 'camel', 'pyramid']
 
-        self.vaos['grasspatch'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['grasspatch'])
-        self.vaos['shadow_grasspatch'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['grasspatch'])
-
-        self.vaos['tent'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['tent'])
-        self.vaos['shadow_tent'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['tent'])
-
-        self.vaos['grass'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['grass'])
-        self.vaos['shadow_grass'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['grass'])
-
-        self.vaos['militaryvehicle'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['militaryvehicle'])
-        self.vaos['shadow_militaryvehicle'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['militaryvehicle'])
-
-        self.vaos['tree'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['tree'])
-        self.vaos['shadow_tree'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['tree'])
-
-        self.vaos['treetop'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['treetop'])
-        self.vaos['shadow_treetop'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['treetop'])
-
-        self.vaos['cactus'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['cactus'])
-        self.vaos['shadow_cactus'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['cactus'])
-
-        self.vaos['treetrunk'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['treetrunk'])
-        self.vaos['shadow_treetrunk'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['treetrunk'])
-
-        self.vaos['smallrock'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['smallrock'])
-        self.vaos['shadow_smallrock'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['smallrock'])
-
-        self.vaos['stone_a'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['stone_a'])
-        self.vaos['shadow_stone_a'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['stone_a'])
-
-        self.vaos['stone_b'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['stone_b'])
-        self.vaos['shadow_stone_b'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['stone_b'])
-
-        self.vaos['stone_c'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['stone_c'])
-        self.vaos['shadow_stone_c'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['stone_c'])
-
-        self.vaos['camel'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['camel'])
-        self.vaos['shadow_camel'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['camel'])
-
-        self.vaos['pyramid'] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos['pyramid'])
-        self.vaos['shadow_pyramid'] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos['pyramid'])
-
+        #Generate the VAOs
+        for obj in objs:
+            self.vaos[obj] = self.get_vao(program=self.program.programs['default'], vbo=self.vbo.vbos[obj])
+            self.vaos[f"shadow_{obj}"] = self.get_vao(program=self.program.programs['shadow_map'], vbo=self.vbo.vbos[obj])
 
     # Method to create and configure a VAO
     def get_vao(self, program, vbo):

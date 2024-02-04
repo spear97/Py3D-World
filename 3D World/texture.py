@@ -72,6 +72,7 @@ class Texture:
         self.textures['pyramid'] = self.get_texture(path='textures/pyramid.png')
         self.textures['depth_texture'] = self.get_depth_texture()
 
+
     # Method to create and configure a depth texture
     def get_depth_texture(self):
 
