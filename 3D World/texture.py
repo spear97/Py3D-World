@@ -70,6 +70,9 @@ class Texture:
         self.textures['stone_c'] = self.get_texture(path='textures/stone_c.png')
         self.textures['camel'] = self.get_texture(path='textures/camel.png')
         self.textures['pyramid'] = self.get_texture(path='textures/pyramid.png')
+        self.textures['plane_dirt'] = self.get_texture(path='textures/plane_dirt.png')
+        self.textures['plane_grass'] = self.get_texture(path='textures/plane_grass.png')
+        self.textures['plane_sand'] = self.get_texture(path='textures/plane_sand.png')
         self.textures['depth_texture'] = self.get_depth_texture()
 
 

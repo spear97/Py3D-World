@@ -39,20 +39,26 @@ class ShaderProgram:
         self.programs = {}
 
         # Load and store default shader programs
+        self.programs['default'] = self.get_program('default')
         self.programs['skybox'] = self.get_program('skybox')
-        self.programs['shadow_map'] = self.get_program('shadow_map')
         self.programs['advanced_skybox'] = self.get_program('advanced_skybox')
-
-        # Shaders that need to be created
-        shaders = ['default', 'plane', 'grasspatch', 
-                   'militaryvehicle', 'tree', 'treetop', 
-                   'cactus', 'treetrunk', 'smallrock', 
-                   'stone_a', 'stone_b', 'stone_c', 
-                   'camel', 'pyramid']
-
-        # Create Shaders
-        for shader in shaders:
-            self.programs[shader] = self.get_program('default')
+        self.programs['shadow_map'] = self.get_program('shadow_map')
+        self.programs['plane'] = self.get_program('default')
+        self.programs['grasspatch'] = self.get_program('default')
+        self.programs['militaryvehicle'] = self.get_program('default')
+        self.programs['tree'] = self.get_program('default')
+        self.programs['treetop'] = self.get_program('default')
+        self.programs['cactus'] = self.get_program('default')
+        self.programs['treetrunk'] = self.get_program('default')
+        self.programs['smallrock'] = self.get_program('default')
+        self.programs['stone_a'] = self.get_program('default')
+        self.programs['stone_b'] = self.get_program('default')
+        self.programs['stone_c'] = self.get_program('default')
+        self.programs['camel'] = self.get_program('default')
+        self.programs['pyramid'] = self.get_program('default')
+        self.programs['plane_dirt'] = self.get_program('default')
+        self.programs['plane_grass'] = self.get_program('default')
+        self.programs['plane_sand'] = self.get_program('default')
 
     # Method to load and compile vertex and fragment shaders, then create a shader program
     def get_program(self, shader_program_name):

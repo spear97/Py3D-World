@@ -171,6 +171,30 @@ class Plane(ExtendedBaseModel):
         # Call the constructor of the parent class (ExtendedBaseModel) using super()
         super().__init__(app, vao_name, tex_id, pos, rot, scale)
 
+# Define a class named Plane that inherits from ExtendedBaseModel
+class Plane_Grass(ExtendedBaseModel):
+    # Constructor method to initialize the Plane object
+    def __init__(self, app, vao_name='plane_grass', tex_id='plane_grass',
+                 pos=(0, 0, 0), rot=(-90, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+        
+# Define a class named Plane that inherits from ExtendedBaseModel
+class Plane_Dirt(ExtendedBaseModel):
+    # Constructor method to initialize the Plane object
+    def __init__(self, app, vao_name='plane_dirt', tex_id='plane_dirt',
+                 pos=(0, 0, 0), rot=(-90, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
+# Define a class named Plane that inherits from ExtendedBaseModel
+class Plane_Sand(ExtendedBaseModel):
+    # Constructor method to initialize the Plane object
+    def __init__(self, app, vao_name='plane_sand', tex_id='plane_sand',
+                 pos=(0, 0, 0), rot=(-90, 0, 0), scale=(1, 1, 1)):
+        # Call the constructor of the parent class (ExtendedBaseModel) using super()
+        super().__init__(app, vao_name, tex_id, pos, rot, scale)
+
 # Define a class named Grass that inherits from ExtendedBaseModel
 class Grass(ExtendedBaseModel):
     # Constructor method to initialize the Grass object
