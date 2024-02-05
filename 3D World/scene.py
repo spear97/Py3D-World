@@ -2,8 +2,10 @@ from model import *
 import glm
 import random
 
-
+# BOUNDS About X-Axis
 X_MIN_BOUND, X_MAX_BOUND = -50, 50
+
+# Bounds About Z-Axis
 Z_MIN_BOUND, Z_MAX_BOUND = -55, 35
 
 # Scene class
@@ -94,10 +96,129 @@ class Scene:
     def get_yaw(self):
         return random.randrange(0.0, 360.0)
 
+    # Get where the plane needs to be
+    def get_plane_pos(self):
+        return (0, -1, -10)
+
+    # Get the First Option for Scaling
+    def get_scale_1(self):
+        return (0.5, 0.5, 0.5)
+
+    # Get the Second Option for Scaling
+    def get_scale_2(self):
+        return (0.25, 0.25, 0.25)
+
+    # Get the Scale of the plane
+    def get_plane_scale(self):
+        return (0.25, 0.25, 0.25)
+
+    """
+    Position Generators
+    """
+
+    # Generate the (X,Z) Coordinate for the Y-Value of -0.87
+    def generate_height_pos_1(self):
+        x,z = self.get_x(), self.get_z()
+        return (x, -0.87, z)
+
+    # Genereate the (X,Z) Coordinate for the Y-Value for -0.75
+    def generate_height_pos_2(self):
+        x,z = self.get_x(), self.get_z()
+        return (x, -0.75, z)
+
+    # Generate the Yaw-Value value for the Object to rotate to
+    def generate_rotation(self):
+        yaw = self.get_yaw()
+        return (0, yaw, 0)
 
     """
     Object Generators
     """
+
+    # Generate Patches of Grass
+    def generate_grass_patches(self, add, app, instances):
+        for i in range(instances):
+            add(GrassPatch(app, pos=self.generate_height_pos_1(), rot=self.generate_rotation()))
+
+    # Generate Single Instances of Grass
+    def generate_grass(self, add, app, instances):
+        for i in range(instances):
+            add(Grass(app, pos=self.generate_height_pos_1(), rot=self.generate_rotation()))
+
+    # Generate Small Rocks
+    def generate_small_rocks(self, add, app, instances):
+        for i in range(instances):
+            add(SmallRock(app, pos=self.generate_height_pos_1(), rot=self.generate_rotation()))
+
+    # Generate Trees
+    def generate_trees(self, add, app, instances):
+        for i in range(instances):
+
+            # Generate Positions
+            gen_pos = pos=self.generate_height_pos_2()
+            gen_pos_offset= (gen_pos[0], 3-gen_pos[1], gen_pos[2])
+
+            # Generate Rotations
+            gen_rot = self.generate_rotation()
+
+            # Add Objects to Scene
+            add(TreeBottom(app, pos=gen_pos, rot=gen_rot, scale=self.get_scale_1()))
+            add(TreeTop(app, pos=gen_pos_offset, rot=gen_rot, scale=self.get_scale_1()))
+
+    # Generate Trees without any leaves
+    def generate_trees_no_tops(self, add, app, instances):
+        for i in range(instances):
+            add(TreeBottom(app, pos=self.generate_height_pos_1(), rot=self.generate_rotation(), scale=self.get_scale_1()))
+
+    # Generate Military Vehicles
+    def generate_military_vehicles(self, add, app, instances):
+        for i in range(instances):
+            add(MilitaryVehicle(app, pos=self.generate_height_pos_1(), rot=self.generate_rotation(), scale=self.get_scale_1()))
+
+    # Generate the First Version of Stones
+    def generate_stones_A(self, add, app, instances):
+        for i in range(instances):
+            add(Stone_A(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation(), scale=self.get_scale_2()))
+
+    # Generate the Second Version of Stones
+    def generate_stones_B(self, add, app, instances):
+        for i in range(instances):
+            add(Stone_B(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation(), scale=self.get_scale_2()))
+
+    # Generate the Third Version of Stones
+    def generate_stones_C(self, add, app, instances):
+        for i in range(instances):
+            add(Stone_C(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation(), scale=self.get_scale_2()))
+
+    # Generate Tree Trunks
+    def generate_tree_trunks(self, add, app, instances):
+        for i in range(5):
+            add(TreeTrunk(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation()))
+
+    # Generate Tents
+    def generate_tents(self, add, app, instances):
+        for i in range(instances):
+            add(Tent(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation(), scale=self.get_scale_1()))
+
+    # Generate Bushes
+    def generate_bushes(self, add, app, instances):
+        for i in range(instances):
+            add(TreeTop(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation(),scale=self.get_scale_1()))
+
+    # Generate Cacti
+    def generate_cacti(self, add, app, instances):
+        for i in range(instances):
+            add(Cactus(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation()))
+
+    # Generate Pyramids
+    def generate_pyramids(self, add, app, instances):
+        for i in range(instances):
+            add(Pyramid(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation(), scale=self.get_scale_2()))
+
+    # Generate Camels
+    def generate_camels(self, add, app, instances):
+        for i in range(5):
+            add(Camel(app, pos=self.generate_height_pos_2(), rot=self.generate_rotation(), scale=self.get_scale_1()))
 
     """
     Environment
@@ -105,156 +226,103 @@ class Scene:
 
     # The Default Environment that will render upon start
     def render_DefaultEnvironment(self, app, add):
-        add(Plane(app, pos=(0, -1, -10), scale=(0.25, 0.25, 0.25)))
+        add(Plane(app, pos=self.get_plane_pos(), scale=self.get_plane_scale()))
 
     # The First Environment that is able to be selected to render
     def render_Environment1(self, app, add):
 
         # Generate the Plane that will be needed for the Environment to Generate on
-        add(Plane_Grass(app, pos=(0, -1, -10), scale=(0.25, 0.25, 0.25)))
+        add(Plane_Grass(app, pos=self.get_plane_pos(), scale=self.get_plane_scale()))
         
         # Generate all the Patches of Grass for the Environment
-        for i in range(500):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(GrassPatch(app, pos=(x, -0.87, z), rot=(0, yaw, 0)))
+        self.generate_grass_patches(instances=500, add=add, app=app)
 
         # Generate all the Grass for the Environment
-        for i in range(150):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Grass(app, pos=(x, -0.87, z), rot=(0, yaw, 0)))
+        self.generate_grass(instances=150, add=add, app=app)
 
         # Geneate all the Small Rocks for the Enviornment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(SmallRock(app, pos=(x, -0.87, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_small_rocks(instances=20, add=add, app=app)
 
         # Generate all the Trees for the Environment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(TreeBottom(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
-            add(TreeTop(app, pos=(x, 3-0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
+        self.generate_trees(instance=20, add=add, app=app)
 
         # Genereate all the Military Vehicles for the Environment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(MilitaryVehicle(app, pos=(x, -0.75, z), rot=(0, yaw, 0)))
+        self.generate_military_vehicles(instances=20, add=add, app=app)
 
         # Generate all the Stone_As for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_A(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_A(instances=20, add=add, app=app)
 
         # Generate all the Stone_Bs for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_B(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_B(instances=20, add=add, app=app)
 
         # Generate all the Stone_Cs for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_C(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_C(instances=20, add=add, app=app)
 
         # Generate all the Tree Trunks for the Enviornment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(TreeTrunk(app, pos=(x, -0.75, z), rot=(0, yaw, 0)))
+        self.generate_tree_trunks(instances=5, add=add, app=app)
 
         # Generate all the Tents for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Tent(app, pos=(x, -1.25, z), rot=(0, yaw, 0), scale=(0.3, 0.3, 0.3)))
+        self.generate_tents(instances=5, add=add, app=app)
 
 
     # The Second Environment that is able to be selected to render
     def render_Environment2(self, app, add):
 
         # Generate the Plane that will be needed for the Environment to Generate on
-        add(Plane_Dirt(app, pos=(0, -1, -10), scale=(0.25, 0.25, 0.25)))
+        add(Plane_Dirt(app, pos=self.get_plane_pos(), scale=self.get_plane_scale()))
 
         # Generate all the Patches of Grass for the Environment
-        for i in range(250):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(GrassPatch(app, pos=(x, -0.87, z), rot=(0, yaw, 0)))
+        self.generate_grass_patches(instances=250, add=add, app=app)
 
         # Generate all Bushes
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(TreeTop(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
+        self.generate_bushes(instances=20, add=add, app=app)
 
         # Geneate all the Small Rocks for the Enviornment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(SmallRock(app, pos=(x, -0.87, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_small_rocks(instances=20, add=add, app=app)
 
         # Generate all the Grass for the Environment
-        for i in range(150):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Grass(app, pos=(x, -0.87, z), rot=(0, yaw, 0)))
+        self.generate_grass(instances=20, add=add, app=app)
 
         # Generate all the Trees for the Environment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(TreeBottom(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
+        self.generate_trees_no_tops(instances=20, add=add, app=app)
 
         # Generate all the Stone_As for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_A(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_A(instances=5, add=add, app=app)
 
         # Generate all the Stone_Bs for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_B(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_B(instances=5, add=add, app=app)
 
         # Generate all the Stone_Cs for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_C(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_C(instances=5, add=add, app=app)
 
         # Genereate all the Military Vehicles for the Environment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(MilitaryVehicle(app, pos=(x, -0.75, z), rot=(0, yaw, 0)))
+        self.generate_military_vehicles(instances=20, add=add, app=app)
 
     # The Third Environment that is able to be selected to render
     def render_Environment3(self, app, add):
 
         # Generate the Plane that will be needed for the Environment to Generate on
-        add(Plane_Sand(app, pos=(0, -1, -10), scale=(0.25, 0.25, 0.25)))
+        add(Plane_Sand(app, pos=self.get_plane_pos(), scale=self.get_plane_scale()))
 
         # Genereate all the Cacti for the Environment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Cactus(app, pos=(x, -0.75, z), rot=(0, yaw, 0)))
+        self.generate_cacti(instances=20, add=add, app=app)
 
         # Geneate all the Small Rocks for the Enviornment
-        for i in range(20):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(SmallRock(app, pos=(x, -0.87, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_small_rocks(instances=20, add=add, app=app)
 
         # Generate all the Stone_As for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_A(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_A(instances=5, add=add, app=app)
 
         # Generate all the Stone_Bs for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_B(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_B(instances=5, add=add, app=app)
 
         # Generate all the Stone_Cs for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Stone_C(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_stones_C(instances=5, add=add, app=app)
 
         # Generate all the Pyramid for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Pyramid(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.25, 0.25, 0.25)))
+        self.generate_pyramids(instances=5, add=add, app=app)
 
-        # Generate all the Stone_Cs for the Environment
-        for i in range(5):
-            x,z,yaw = self.get_x(), self.get_z(), self.get_yaw()
-            add(Camel(app, pos=(x, -0.75, z), rot=(0, yaw, 0), scale=(0.5, 0.5, 0.5)))
+        # Generate all the Camels for the Environment
+        self.generate_camels(instances=5, add=add, app=app)
 
 
