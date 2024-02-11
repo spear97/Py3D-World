@@ -103,6 +103,16 @@ The `CactusVBO` class is designed to manage a Vertex Buffer Object (VBO) specifi
 
 ### CamelVBO
 
+The CamelVBO class is designed to manage a Vertex Buffer Object (VBO) specifically for rendering camel objects in a graphics application. Below is a breakdown of its key components and functionality:
+
+- **Initialization:** The constructor initializes the CamelVBO object. It calls the constructor of the parent class BaseVBO using super() to inherit its properties and methods.
+
+- **Vertex Data Format:** The format of the vertex data is specified as '2f 3f 3f', indicating that each vertex consists of 2D texture coordinates, 3D normals, and 3D positions.
+
+- **Attribute Names:** Attribute names are defined for texture coordinates (in_texcoord_0), normals (in_normal), and positions (in_position). These attributes correspond to the format specified above.
+
+- **Retrieving Vertex Data:** The get_vertex_data method retrieves vertex data for the camel object from an external Wavefront .obj file. It loads the .obj file using the pywavefront library, parses its contents, and extracts the vertex data from the parsed object's materials.
+
 ### GrassVBO
 
 ### GrassPatchVBO
