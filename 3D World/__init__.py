@@ -55,7 +55,7 @@ class GraphicsEngine:
         pg.display.gl_set_attribute(pg.GL_CONTEXT_PROFILE_MASK, pg.GL_CONTEXT_PROFILE_CORE)
         
         # Create OpenGL context
-        pg.display.set_mode(self.WIN_SIZE, flags=pg.OPENGL | pg.DOUBLEBUF)
+        self.screen = pg.display.set_mode(self.WIN_SIZE, flags=pg.OPENGL | pg.DOUBLEBUF)
         
         # Mouse settings
         pg.event.set_grab(True)
@@ -86,6 +86,7 @@ class GraphicsEngine:
         # Initialize renderer
         self.scene_renderer = SceneRenderer(self)
 
+
     # Check for quit events
     def check_events(self):
         for event in pg.event.get():
@@ -94,6 +95,7 @@ class GraphicsEngine:
                 self.scene_renderer.destroy()
                 pg.quit()
                 sys.exit()
+
 
     # Render the scene
     def render(self):
@@ -124,33 +126,3 @@ if __name__ == '__main__':
     # Create an instance of the GraphicsEngine and run the application
     app = GraphicsEngine((640, 640))
     app.run()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

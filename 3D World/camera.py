@@ -144,7 +144,6 @@ class Camera:
         if keys[pg.K_e]:  # Move down (opposite to the camera's up vector)
             self.position -= self.up * velocity
 
-
     # Method to get the view matrix
     def get_view_matrix(self):
         return glm.lookAt(self.position, self.position + self.forward, self.up)
