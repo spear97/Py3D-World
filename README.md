@@ -103,7 +103,7 @@ The `CactusVBO` class is designed to manage a Vertex Buffer Object (VBO) specifi
 
 ### CamelVBO
 
-The CamelVBO class is designed to manage a Vertex Buffer Object (VBO) specifically for rendering camel objects in a graphics application. Below is a breakdown of its key components and functionality:
+The `CamelVBO` class is designed to manage a Vertex Buffer Object (VBO) specifically for rendering camel objects in a graphics application. Below is a breakdown of its key components and functionality:
 
 - **Initialization:** The constructor initializes the CamelVBO object. It calls the constructor of the parent class BaseVBO using super() to inherit its properties and methods.
 
