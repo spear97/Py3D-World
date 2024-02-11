@@ -2,7 +2,7 @@
 
 ## Description
 
-This project serves to illustrate how to render a 3D-Textured, Environment Engine utlizing Python, OpenGL, and some GLSL. It is based off two projects two seperate projects. 
+This project serves to illustrate how to render a 3D-Textured, Environment Engine utlizing Python, OpenGL, and some GLSL. It is based off two projects two seperate projects. The first being StanislavPetrovV's `[3D-Graphics-Engine Project](https://github.com/StanislavPetrovV/3D-Graphics-Engine)`.
 
 ## Table of Contents
 
