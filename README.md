@@ -69,6 +69,14 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 ### VBO
 
+The `VBO` class is responsible for managing different Vertex Buffer Objects (VBOs) associated with various objects in the graphics application. Here's a summary of its key features:
+
+- **Initialization:** Initializes the VBO object with a dictionary (self.vbos) to store different VBOs for various objects. It creates instances of specific VBO classes (CubeVBO, SkyBoxVBO, AdvancedSkyBoxVBO) and stores them in the dictionary.
+
+- **VBO Storage:** The class stores VBOs for different objects, such as a cube ('cube'), a skybox ('skybox'), and an advanced skybox ('advanced_skybox'). Each VBO is an instance of a specific VBO class.
+
+- **Destroy Method:** The destroy method is responsible for releasing resources associated with all loaded VBOs. It iterates over the VBOs in the dictionary and calls the destroy method for each VBO, freeing up OpenGL resources.
+
 ### BaseVBO
 
 ### CactusVBO
