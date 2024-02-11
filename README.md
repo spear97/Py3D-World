@@ -79,7 +79,7 @@ The `VBO` class is responsible for managing different Vertex Buffer Objects (VBO
 
 ### BaseVBO
 
-The BaseVBO class serves as an abstract base class providing a foundation for managing Vertex Buffer Objects (VBOs) in the graphics application. Here's a summary of its key features:
+The `BaseVBO` class serves as an abstract base class providing a foundation for managing Vertex Buffer Objects (VBOs) in the graphics application. Here's a summary of its key features:
 
 - **Initialization:** Initializes the BaseVBO object with a reference to the context (self.ctx), a VBO (self.vbo), and placeholders (self.format and self.attribs) for the vertex format attributes.
 
