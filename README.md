@@ -117,9 +117,17 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 The `Scene` class is responsible for managing the objects within a 3D scene in a graphics application. It maintains a list of objects and provides methods for adding objects to the scene, loading initial objects, and updating the scene. Additionally, it incorporates an advanced skybox for environmental rendering.
 
-- Initialization:** The constructor initializes  the Scene object with a reference to the application (app) and creates an empty list to store objects. It then loads initial objects into the scene and creates an advanced skybox.
+- **Initialization:** The constructor initializes  the Scene object with a reference to the application (app) and creates an empty list to store objects. It then loads initial objects into the scene and creates an advanced skybox.
   
-- Adding Objects:** add_object: Method to add objects to the scene by appending them to the list of objects.
+- **Adding Objects:** add_object: Method to add objects to the scene by appending them to the list of objects.
+
+- **Loading Initial Objects:** load: Populates the scene with objects. In the given example, it creates a floor with a grid of cubes and different environments (default, forest, rocky terrain, desert) with corresponding objects.
+
+- **Updating the Scene:** update: Intended to be called in the game loop. It currently does not have any implementation but could be used to update object positions, animations, or any other dynamic changes in the scene.
+
+- **Helper Functions:** Different methods (render_DefaultEnvironment, render_Environment1, render_Environment2, render_Environment3) are defined to render different environments by adding appropriate objects to the scene.
+
+- **Object Generators:** Methods to generate specific types of objects (grass, rocks, trees, etc.) within each environment.
 
 ## Camera
 
