@@ -115,6 +115,12 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 ## Scene
 
+The `Scene` class is responsible for managing the objects within a 3D scene in a graphics application. It maintains a list of objects and provides methods for adding objects to the scene, loading initial objects, and updating the scene. Additionally, it incorporates an advanced skybox for environmental rendering.
+
+- Initialization:** The constructor initializes  the Scene object with a reference to the application (app) and creates an empty list to store objects. It then loads initial objects into the scene and creates an advanced skybox.
+  
+- Adding Objects:** add_object: Method to add objects to the scene by appending them to the list of objects.
+
 ## Camera
 
 The `Camera` class is responsible for handling camera movement, rotation, and generating view and projection matrices. Here's a summary of its key components and functionality:
