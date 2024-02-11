@@ -149,6 +149,14 @@ The `TentVBO` class is responsible for managing Vertex Buffer Objects (VBOs) for
 
 ### PlaneVBO
 
+The `PlaneVBO` class manages Vertex Buffer Objects (VBOs) for planes in a graphics application. It inherits from the `BaseVBO` class, providing a foundation for VBO management. Below is an overview of its functionalities:
+
+- **Initialization**: The constructor method initializes the `PlaneVBO` object, setting up the necessary attributes such as the format of the vertex data and attribute names.
+
+- **Vertex Data Retrieval**: The `get_vertex_data` method retrieves vertex data for the plane from an external Wavefront .obj file, parses its contents, and returns the processed vertex data as a NumPy array.
+
+- **Format Specification**: It defines the format of the vertex data, including texture coordinates, normals, and positions.
+
 ### Plane_GrassVBO
 
 ### Plane_SandVBO
