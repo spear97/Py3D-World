@@ -91,7 +91,7 @@ The `BaseVBO` class serves as an abstract base class providing a foundation for 
 
 ### CactusVBO
 
-The CactusVBO class is designed to manage a Vertex Buffer Object (VBO) specifically for rendering cactus objects in a graphics application. Here's a breakdown of its key components and functionality:
+The `CactusVBO` class is designed to manage a Vertex Buffer Object (VBO) specifically for rendering cactus objects in a graphics application. Here's a breakdown of its key components and functionality:
 
 - **Initialization:** The constructor initializes the CactusVBO object. It calls the constructor of the parent class BaseVBO using super() to inherit its properties and methods.
 
