@@ -79,6 +79,16 @@ The `VBO` class is responsible for managing different Vertex Buffer Objects (VBO
 
 ### BaseVBO
 
+The BaseVBO class serves as an abstract base class providing a foundation for managing Vertex Buffer Objects (VBOs) in the graphics application. Here's a summary of its key features:
+
+- **Initialization:** Initializes the BaseVBO object with a reference to the context (self.ctx), a VBO (self.vbo), and placeholders (self.format and self.attribs) for the vertex format attributes.
+
+- **Abstract Method:** Initializes the BaseVBO object with a reference to the context (self.ctx), a VBO (self.vbo), and placeholders (self.format and self.attribs) for the vertex format attributes.
+
+- **VBO Creation:** The get_vbo method is responsible for creating and configuring a VBO using the vertex data obtained from the get_vertex_data method.
+
+- **Resource Release:** The destroy method releases resources associated with the VBO. It calls the release method on the VBO, freeing up OpenGL resources.
+
 ### CactusVBO
 
 ### CamelVBO
