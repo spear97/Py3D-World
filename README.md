@@ -93,7 +93,7 @@ The `GraphicsEngine` class serves as the core component for setting up and manag
 
 The `BaseModel` class serves as the foundation for representing 3D objects within a graphics application. It encapsulates key functionalities required for managing object properties, transformation matrices, rendering, and state updates. The BaseModel class provides essential functionality for initializing objects in the 3D scene, updating their state within the game loop, calculating model matrices, and rendering the objects using associated Vertex Array Objects (VAOs).
 
-Key Features
+## Key Features
 
 - Constructor: Upon instantiation, the constructor initializes the object within the 3D scene. It accepts parameters such as the application context (app), VAO name (vao_name), texture ID (tex_id), initial position (pos), rotation angles (rot), and scale (scale). The constructor stores references to the application, initializes transformation properties, calculates the initial model matrix, and sets up texture and VAO information.
 
