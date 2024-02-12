@@ -19,9 +19,46 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 ### BaseModel
 
+The `BaseModel` class serves as the foundation for representing 3D objects within a graphics application. It encapsulates key functionalities required for managing object properties, transformation matrices, rendering, and state updates. The BaseModel class provides essential functionality for initializing objects in the 3D scene, updating their state within the game loop, calculating model matrices, and rendering the objects using associated Vertex Array Objects (VAOs).
+
+Key Features
+
+- Constructor: Upon instantiation, the constructor initializes the object within the 3D scene. It accepts parameters such as the application context (app), VAO name (vao_name), texture ID (tex_id), initial position (pos), rotation angles (rot), and scale (scale). The constructor stores references to the application, initializes transformation properties, calculates the initial model matrix, and sets up texture and VAO information.
+
+- Update Method: The update method, though a placeholder in the base class, is intended to be implemented in derived classes. It serves to update the object's state and is called within the game loop.
+
+- Get Model Matrix Method: The get_model_matrix method calculates and returns the model matrix for the object based on its position, rotation, and scale. It utilizes the glm library for matrix transformations.
+
+- Render Method: The render method updates the object's state by invoking the update method and subsequently renders the object using its associated VAO.
+
 ### ExtendedBaseModel
 
+The `ExtendedBaseModel` class extends the functionality provided by the BaseModel class, introducing additional capabilities tailored for rendering and managing objects within a 3D scene. It inherits properties and methods from the BaseModel class and further enhances them to accommodate specific rendering requirements. The ExtendedBaseModel class inherits from BaseModel and enhances it by introducing additional initialization steps, updating methods for rendering, and rendering methods specialized for shadow mapping. It provides an extended interface for managing object properties, rendering parameters, and shader uniforms.
+
+Key Features
+
+- Constructor: The constructor initializes the ExtendedBaseModel object, performing additional initialization specific to this class after calling the constructor of the base class (BaseModel).
+
+- Update Method: The update method updates the object's state for rendering, binding textures, and updating shader uniforms required for rendering the object.
+
+- Update Shadow Method: The update_shadow method updates shadow-related shader uniforms.
+
+- Render Shadow Method: The render_shadow method renders the object for shadow mapping, updating shadow-related shader uniforms and utilizing shadow VAO for rendering.
+
+- Additional Initialization: The on_init method performs additional initialization steps, such as updating light-related shader uniforms, configuring shadow-related rendering parameters, setting texture and MVP matrices for rendering and shadow mapping programs, and setting light-related shader uniforms for the main rendering program.
+
 ### Plane
+
+The `Plane` class represents a plane object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a straightforward way to create and manage plane objects, simplifying the process of integrating planes into the graphics application. The `Plane` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render plane objects within a 3D scene. It offers a simple interface for initializing plane objects with customizable parameters such as position, rotation, and scale.
+
+The constructor method initializes a `Plane` object within the 3D scene. It accepts the following parameters:
+
+- `app`: Reference to the application context.
+- `vao_name` (optional): Name of the Vertex Array Object (VAO). Default is `'plane'`.
+- `tex_id` (optional): Texture ID. Default is `'plane'`.
+- `pos` (optional): Initial position of the plane. Default is `(0, 0, 0)`.
+- `rot` (optional): Initial rotation angles of the plane in degrees. Default is `(-90, 0, 0)`.
+- `scale` (optional): Initial scale of the plane. Default is `(1, 1, 1)`.
 
 ### Plane_Grass
 
