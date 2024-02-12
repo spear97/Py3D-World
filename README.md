@@ -10,6 +10,8 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 ## Table of Contents
 
 1. [Classes](#Classes)
+  a. [GraphicsEngine](#GraphicsEngine)
+  b. 
 
 # Classes
 
@@ -51,67 +53,89 @@ Key Features
 
 The `Plane` class represents a plane object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a straightforward way to create and manage plane objects, simplifying the process of integrating planes into the graphics application. The `Plane` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render plane objects within a 3D scene. It offers a simple interface for initializing plane objects with customizable parameters such as position, rotation, and scale.
 
-The constructor method initializes a `Plane` object within the 3D scene. It accepts the following parameters:
-
-- `app`: Reference to the application context.
-- `vao_name` (optional): Name of the Vertex Array Object (VAO). Default is `'plane'`.
-- `tex_id` (optional): Texture ID. Default is `'plane'`.
-- `pos` (optional): Initial position of the plane. Default is `(0, 0, 0)`.
-- `rot` (optional): Initial rotation angles of the plane in degrees. Default is `(-90, 0, 0)`.
-- `scale` (optional): Initial scale of the plane. Default is `(1, 1, 1)`.
-
 ### Plane_Grass
 
 The `Plane_Grass` class represents a grass plane object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage grass plane objects, simplifying the integration of grassy terrain into the graphics application. The `Plane_Grass` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render grass plane objects within a 3D scene. It offers a simple interface for initializing grass plane objects with customizable parameters such as position, rotation, and scale.
 
-The constructor method initializes a `Plane_Grass` object within the 3D scene. It accepts the following parameters:
-
-- `app`: Reference to the application context.
-- `vao_name` (optional): Name of the Vertex Array Object (VAO). Default is `'plane_grass'`.
-- `tex_id` (optional): Texture ID. Default is `'plane_grass'`.
-- `pos` (optional): Initial position of the grass plane. Default is `(0, 0, 0)`.
-- `rot` (optional): Initial rotation angles of the grass plane in degrees. Default is `(-90, 0, 0)`.
-- `scale` (optional): Initial scale of the grass plane. Default is `(1, 1, 1)`.
-
 ### Plane_Dirt
+
+The `Plane_Dirt` class represents a dirt plane object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage dirt plane objects, simplifying the integration of terrain with dirt textures into the graphics application. The `Plane_Dirt` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render dirt plane objects within a 3D scene. It offers a simple interface for initializing dirt plane objects with customizable parameters such as position, rotation, and scale.
 
 ### Plane_Sand
 
+The `Plane_Sand` class represents a sand plane object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage sand plane objects, simplifying the integration of terrain with sand textures into the graphics application. The `Plane_Sand` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render sand plane objects within a 3D scene. It offers a simple interface for initializing sand plane objects with customizable parameters such as position, rotation, and scale.
+
 ### Grass
+
+The `Grass` class represents a grass object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage grass objects, simplifying the integration of grassy elements into the graphics application. The `Grass` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render grass objects within a 3D scene. It offers a simple interface for initializing grass objects with customizable parameters such as position, rotation, and scale.
 
 ### Grass_Patch
 
+The `GrassPatch` class represents a patch of grass within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage grass patches, simplifying the integration of grassy terrain into the graphics application. The `GrassPatch` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render grass patches within a 3D scene. It offers a simple interface for initializing grass patches with customizable parameters such as position, rotation, and scale.
+
 ### Tent
+
+The `Tent` class represents a tent object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage tent objects, simplifying the integration of tents into the graphics application. The `Tent` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render tent objects within a 3D scene. It offers a simple interface for initializing tent objects with customizable parameters such as position, rotation, and scale.
 
 ### TreeTrunk
 
+The `TreeTrunk` class represents a tree trunk object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage tree trunk objects, simplifying the integration of trees into the graphics application. The `TreeTrunk` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render tree trunk objects within a 3D scene. It offers a simple interface for initializing tree trunk objects with customizable parameters such as position, rotation, and scale.
+
 ### TreeBottom
+
+The `TreeBottom` class represents the bottom part of a tree within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage tree bottom objects, simplifying the integration of trees into the graphics application. The `TreeBottom` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render the bottom part of a tree within a 3D scene. It offers a simple interface for initializing tree bottom objects with customizable parameters such as position, rotation, and scale.
 
 ### TreeTop
 
+The `TreeTop` class represents the top part of a tree within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage tree top objects, simplifying the integration of trees into the graphics application. The `TreeTop` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render the top part of a tree within a 3D scene. It offers a simple interface for initializing tree top objects with customizable parameters such as position, rotation, and scale.
+
 ### SmallRock
+
+The `SmallRock` class represents a small rock object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage small rock objects, simplifying the integration of rocks into the graphics application. The `SmallRock` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render small rock objects within a 3D scene. It offers a simple interface for initializing small rock objects with customizable parameters such as position, rotation, and scale.
 
 ### Stone_A
 
+The `Stone_A` class represents a stone type A object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage stone type A objects, simplifying the integration of stones into the graphics application. The `Stone_A` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render stone type A objects within a 3D scene. It offers a simple interface for initializing stone type A objects with customizable parameters such as position, rotation, and scale.
+
 ### Stone_B
+
+The `Stone_B` class represents a stone type B object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage stone type B objects, simplifying the integration of stones into the graphics application. The `Stone_B` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render stone type B objects within a 3D scene. It offers a simple interface for initializing stone type B objects with customizable parameters such as position, rotation, and scale.
 
 ### Stone_C
 
+The `Stone_C` class represents a stone type C object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage stone type C objects, simplifying the integration of stones into the graphics application. The `Stone_C` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render stone type C objects within a 3D scene. It offers a simple interface for initializing stone type C objects with customizable parameters such as position, rotation, and scale.
+
 ### MilitaryVehicle
+
+The `MilitaryVehicle` class represents a military vehicle object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage military vehicle objects, simplifying the integration of vehicles into the graphics application. The `MilitaryVehicle` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render military vehicle objects within a 3D scene. It offers a simple interface for initializing military vehicle objects with customizable parameters such as position, rotation, and scale.
 
 ### Cactus
 
+The `Cactus` class represents a cactus object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage cactus objects, simplifying the integration of cacti into the graphics application. The `Cactus` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render cactus objects within a 3D scene. It offers a simple interface for initializing cactus objects with customizable parameters such as position, rotation, and scale.
+
 ### Pyramid
+
+The `Pyramid` class represents a pyramid object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage pyramid objects, simplifying the integration of pyramids into the graphics application. The `Pyramid` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render pyramid objects within a 3D scene. It offers a simple interface for initializing pyramid objects with customizable parameters such as position, rotation, and scale.
 
 ### Camel
 
+The `Camel` class represents a camel object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage camel objects, simplifying the integration of camels into the graphics application. The `Camel` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render camel objects within a 3D scene. It offers a simple interface for initializing camel objects with customizable parameters such as position, rotation, and scale.
+
 ### Cube
+
+The `Cube` class represents a cube object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage cube objects, simplifying the integration of cubes into the graphics application. The `Cube` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render cube objects within a 3D scene. It offers a simple interface for initializing cube objects with customizable parameters such as position, rotation, and scale.
 
 ### MovingCube
 
+The `MovingCube` class represents a cube object that can move within a 3D scene. It inherits functionalities from the `Cube` class and extends it to provide movement capabilities. This class simplifies the integration of moving cube objects into the graphics application. The `MovingCube` class inherits from the `Cube` class and extends its functionalities to represent and render cube objects that can move within a 3D scene. It overrides the `update` method to ensure that the model matrix is updated before rendering, allowing for dynamic movement of the cube.
+
 ### Skybox
 
+The `SkyBox` class represents a skybox object within a 3D scene. It inherits functionalities from the `BaseModel` class and extends it to provide skybox rendering capabilities. This class simplifies the integration of skybox objects into the graphics application. The `SkyBox` class inherits from the `BaseModel` class and extends its functionalities to represent and render skybox objects within a 3D scene. It provides methods to update the view matrix for the skybox and perform additional initialization specific to skyboxes.
+
 ### Advanced Skybox
+
+The `AdvancedSkyBox` class represents an advanced skybox object within a 3D scene. It inherits functionalities from the `BaseModel` class and extends it to provide advanced skybox rendering capabilities. This class simplifies the integration of advanced skybox objects into the graphics application. The `AdvancedSkyBox` class inherits from the `BaseModel` class and extends its functionalities to represent and render advanced skybox objects within a 3D scene. It provides methods to update the inverse projection view matrix for the skybox and perform additional initialization specific to advanced skyboxes.
 
 ## VBO Classes
 
