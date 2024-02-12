@@ -11,8 +11,13 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 1. [Classes](#Classes)
   - GraphicsEngine
+  - Model Classes
+  - VBO Classes
+  - Scene
+  - Camera
+  - VAO
+  - Texture
 2. 
-3. 
    
 # Classes
 
