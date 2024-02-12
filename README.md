@@ -71,6 +71,22 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 ## GraphicsEngine
 
+The `GraphicsEngine` class serves as the core component for setting up and managing a graphics engine utilizing the Pygame and ModernGL libraries. Its primary responsibilities include initializing various modules, creating an OpenGL context, managing window settings, handling input events, tracking time, and orchestrating the rendering pipeline. The class encapsulates functionalities related to light, camera, mesh, scene, and renderer.
+
+## Key Functionalities
+
+- **Initialization**: Initializes Pygame modules, sets up window size and OpenGL attributes, creates an OpenGL context, and configures mouse settings.
+
+- **Tracking Time**: Utilizes Pygame's clock to keep track of the current time and calculate the time elapsed between frames.
+
+- **Resource Management**: Manages resources related to light, camera, mesh, scene, and renderer, ensuring proper initialization and destruction.
+
+- **Event Handling**: Implements event handling to detect quit events, allowing for a clean shutdown of the application.
+
+- **Rendering**: Clears the framebuffer, updates the camera, and renders the scene using the specified renderer.
+
+- **Main Loop**: Runs the main loop of the graphics engine, continuously updating the time, checking for events, updating the camera, rendering the scene, and maintaining a consistent frame rate.
+
 ## Model Classes
 
 ### BaseModel
