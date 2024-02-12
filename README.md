@@ -10,8 +10,6 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 ## Table of Contents
 
 1. [Classes](#Classes)
-  a. [GraphicsEngine](#GraphicsEngine)
-  b. 
 
 # Classes
 
