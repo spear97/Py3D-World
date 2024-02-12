@@ -62,6 +62,17 @@ The constructor method initializes a `Plane` object within the 3D scene. It acce
 
 ### Plane_Grass
 
+The `Plane_Grass` class represents a grass plane object within a 3D scene, inheriting functionalities from the `ExtendedBaseModel` class. It provides a convenient way to create and manage grass plane objects, simplifying the integration of grassy terrain into the graphics application. The `Plane_Grass` class inherits from the `ExtendedBaseModel` class and extends its functionalities to represent and render grass plane objects within a 3D scene. It offers a simple interface for initializing grass plane objects with customizable parameters such as position, rotation, and scale.
+
+The constructor method initializes a `Plane_Grass` object within the 3D scene. It accepts the following parameters:
+
+- `app`: Reference to the application context.
+- `vao_name` (optional): Name of the Vertex Array Object (VAO). Default is `'plane_grass'`.
+- `tex_id` (optional): Texture ID. Default is `'plane_grass'`.
+- `pos` (optional): Initial position of the grass plane. Default is `(0, 0, 0)`.
+- `rot` (optional): Initial rotation angles of the grass plane in degrees. Default is `(-90, 0, 0)`.
+- `scale` (optional): Initial scale of the grass plane. Default is `(1, 1, 1)`.
+
 ### Plane_Dirt
 
 ### Plane_Sand
