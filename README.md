@@ -12,7 +12,55 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 1. [Classes](#Classes)
   - GraphicsEngine
   - Model Classes
+    - BaseModel
+    - ExtendedBaseModel
+    - Plane
+    - Plane_Grass
+    - Plane_Dirt
+    - Plane_Sand
+    - Grass
+    - Grass_Patch
+    - Tent
+    - TreeTrunk
+    - TreeBottom
+    - TreeTop
+    - SmallRock
+    - Stone_A
+    - Stone_B
+    - Stone_C
+    - MilitaryVehicle
+    - Cactus
+    - Pyramid
+    - Camel
+    - Cube
+    - MovingCube
+    - Skybox
+    - AdvacedSkybox
   - VBO Classes
+    - VBO 
+    - BaseVBO
+    - CactusVBO
+    - CamelVBO
+    - GrassVBO
+    - GrassPatchVBO
+    - MilitaryVehicleVBO
+    - PlaneVBO
+    - Plane_GrassVBO
+    - Plane_DirtVBO
+    - Plane_SandVBO
+    - PyramidVBO
+    - SmallRockVBO
+    - Stone_A_VBO
+    - Stone_B_VBO
+    - Stone_C_VBO
+    - TentVBO
+    - TreeVBO
+    - TreeTopVBO
+    - TreeBottomVBO
+    - TreeTrunkVBO
+    - CubeVBO
+    - SkyboxVBO
+    - AdvancedSkyboxVBO
   - Scene
   - Camera
   - VAO
@@ -139,7 +187,7 @@ The `MovingCube` class represents a cube object that can move within a 3D scene.
 
 The `SkyBox` class represents a skybox object within a 3D scene. It inherits functionalities from the `BaseModel` class and extends it to provide skybox rendering capabilities. This class simplifies the integration of skybox objects into the graphics application. The `SkyBox` class inherits from the `BaseModel` class and extends its functionalities to represent and render skybox objects within a 3D scene. It provides methods to update the view matrix for the skybox and perform additional initialization specific to skyboxes.
 
-### Advanced Skybox
+### AdvancedSkybox
 
 The `AdvancedSkyBox` class represents an advanced skybox object within a 3D scene. It inherits functionalities from the `BaseModel` class and extends it to provide advanced skybox rendering capabilities. This class simplifies the integration of advanced skybox objects into the graphics application. The `AdvancedSkyBox` class inherits from the `BaseModel` class and extends its functionalities to represent and render advanced skybox objects within a 3D scene. It provides methods to update the inverse projection view matrix for the skybox and perform additional initialization specific to advanced skyboxes.
 
