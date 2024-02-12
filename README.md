@@ -167,11 +167,11 @@ This class, `CubeVBO`, is designed to handle vertex buffer object (VBO) operatio
 
 ### SkyBoxVBO
 
-The SkyBoxVBO class, derived from the BaseVBO class, facilitates the management of Vertex Buffer Objects (VBOs) specifically tailored for a skybox in a graphics application. The SkyBoxVBO class serves to handle the creation and configuration of VBOs associated with a skybox. It encapsulates methods for generating vertex data for the skybox geometry, arranging vertices and indices into the required format, and preparing the data for rendering.
+The `SkyBoxVBO` class, derived from the BaseVBO class, facilitates the management of Vertex Buffer Objects (VBOs) specifically tailored for a skybox in a graphics application. The SkyBoxVBO class serves to handle the creation and configuration of VBOs associated with a skybox. It encapsulates methods for generating vertex data for the skybox geometry, arranging vertices and indices into the required format, and preparing the data for rendering.
 
 ### AdvanceSkyBoxVBO
 
-The AdvancedSkyBoxVBO class, derived from the BaseVBO class, is specifically tailored for managing Vertex Buffer Objects (VBOs) related to an advanced skybox within a graphics application. The AdvancedSkyBoxVBO class facilitates the creation and configuration of VBOs associated with an advanced skybox. It is optimized for scenarios where the skybox requires specialized treatment, such as setting specific z-values in clip space.
+The `AdvancedSkyBoxVBO` class, derived from the BaseVBO class, is specifically tailored for managing Vertex Buffer Objects (VBOs) related to an advanced skybox within a graphics application. The AdvancedSkyBoxVBO class facilitates the creation and configuration of VBOs associated with an advanced skybox. It is optimized for scenarios where the skybox requires specialized treatment, such as setting specific z-values in clip space.
 
 ## Scene
 
