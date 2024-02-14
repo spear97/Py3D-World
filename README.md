@@ -20,7 +20,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 2. What is a VAO?
 3. What is a VBO?
 4. [Classes](#Classes)
-- [Camera](#Camera)
+   - [Camera](#Camera)
 - [GraphicsEngine](#GraphicsEngine)
 - Model Classes
 - [AdvacedSkybox](#AdvacedSkybox)
