@@ -21,6 +21,10 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 3. What is a VBO?
 4. [Classes](#Classes)
    - [Camera](#Camera)
+   - [GraphicsEngine](#GraphicsEngine)
+   - Model Classes
+      -  [AdvacedSkybox](#AdvacedSkybox)
+      -  [BaseModel](#BaseModel)
 
 # Dependencies
 
