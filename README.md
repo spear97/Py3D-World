@@ -1,7 +1,5 @@
 # Py3D-World
 
-![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot1.png) ![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot2.png) ![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot3.png)
-
 ## Description
 
 This project serves to illustrate how to render a 3D-Textured, Environment Engine utlizing Python, OpenGL, and some GLSL. It is based off two projects two seperate projects. The first being StanislavPetrovV's [3D-Graphics-Engine Project](https://github.com/StanislavPetrovV/3D-Graphics-Engine) and the second being a prior project that I initially created for in my Computer Graphics Class at Texas Wesleyan Univerity for the Spring Semester of 2022. The purpose for developing this project is to act as two things:
@@ -11,7 +9,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 # ScreenShots
 
-![Screenshot1](3D World/Screenshots/Screenshot1.png)
+![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot1.png) ![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot2.png) ![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot3.png)
 
 ## Table of Contents
 
