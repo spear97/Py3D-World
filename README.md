@@ -80,6 +80,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 ## PyGLM
 ```bash
 pip install pyglm
+```
 
 a Python extension module that provides a simple, concise interface to the OpenGL Mathematics (GLM) library. It allows developers to perform mathematical operations commonly used in computer graphics and game development with ease and efficiency.
 
