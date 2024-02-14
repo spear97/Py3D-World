@@ -1,8 +1,6 @@
 # Py3D-World
 
-![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot1.png)
-
-![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot2.png)
+![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot1.png) ![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot2.png)
 
 ![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot3.png)
 
