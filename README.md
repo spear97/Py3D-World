@@ -9,11 +9,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 # ScreenShots
 
-![Screenshot1]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot1.png))
-
-![Screenshot2]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot2.png))
-
-![Screenshot3]([https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot3.png))
+![Screenshot1](3D World/Screenshots/Screenshot1.png))
 
 ## Table of Contents
 
