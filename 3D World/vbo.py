@@ -310,7 +310,7 @@ class Plane_GrassVBO(BaseVBO):
         # Return the processed vertex data
         return vertex_data
 
-    # Define a class named Plane_SandVBO that inherits from BaseVBO
+# Define a class named Plane_SandVBO that inherits from BaseVBO
 class Plane_SandVBO(BaseVBO):
     # Constructor method to initialize the Plane_SandVBO object
     def __init__(self, app):
@@ -338,7 +338,7 @@ class Plane_SandVBO(BaseVBO):
         # Return the processed vertex data
         return vertex_data
 
-    # Define a class named Plane_DirtVBO that inherits from BaseVBO
+# Define a class named Plane_DirtVBO that inherits from BaseVBO
 class Plane_DirtVBO(BaseVBO):
     # Constructor method to initialize the Plane_DirtVBO object
     def __init__(self, app):
