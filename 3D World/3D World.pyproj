@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>04f76313-3c40-4038-84de-f92b0fe6ab2f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>__init__.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -92,7 +92,7 @@
   <ItemGroup>
     <Compile Include="camera.py" />
     <Compile Include="light.py" />
-    <Compile Include="__init__.py" />
+    <Compile Include="main.py" />
     <Compile Include="mesh.py" />
     <Compile Include="model.py" />
     <Compile Include="scene.py" />
