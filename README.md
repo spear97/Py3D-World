@@ -16,7 +16,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
    - [PyGame](#PyGame)
    - [Pywavefront](#PyWavefront)
 2. [What is a VAO (Vertex Array Object)?](#VAO)
-3. [What is a VBO? (Vertex Buffer Object)](#VBO)
+3. [What is a VBO? (Vertex Buffer Object)?](#VBO)
 4. [Classes](#Classes)
    - [Camera](#Camera)
    - [GraphicsEngine](#GraphicsEngine)
