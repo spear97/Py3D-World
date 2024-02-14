@@ -10,23 +10,23 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 ## Table of Contents
 
 1. [Classes](#Classes)
-  - GraphicsEngine
+  - [GraphicsEngine](#GraphicsEngine)
   - Model Classes
-    - BaseModel
-    - ExtendedBaseModel
-    - Plane
-    - Plane_Grass
-    - Plane_Dirt
-    - Plane_Sand
-    - Grass
-    - Grass_Patch
-    - Tent
-    - TreeTrunk
-    - TreeBottom
-    - TreeTop
-    - SmallRock
-    - Stone_A
-    - Stone_B
+    - [BaseModel](#BaseModel)
+    - [ExtendedBaseModel](#ExtendedBaseModel)
+    - [Plane](#Plane)
+    - [Plane_Grass](#Plane_Grass)
+    - [Plane_Dirt](#Plane_Dirt)
+    - [Plane_Sand](#Plane_Sand)
+    - [Grass](#Grass)
+    - [Grass_Patch](#Grass_Patch)
+    - [Tent](#Tent)
+    - [TreeTrunk](#TreeTrunk)
+    - [TreeBottom](#TreeBottom)
+    - [TreeTop](#TreeTop)
+    - [SmallRock](#SmallRock)
+    - [Stone_A](#Stone_A)
+    - [Stone_B](#Stone_B)
     - Stone_C
     - MilitaryVehicle
     - Cactus
