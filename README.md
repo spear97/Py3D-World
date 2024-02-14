@@ -9,7 +9,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 # ScreenShots
 
-![Screenshot1](3D World/Screenshots/Screenshot1.png))
+![Screenshot1](3D World/Screenshots/Screenshot1.png)
 
 ## Table of Contents
 
