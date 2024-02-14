@@ -16,7 +16,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
    - [PyGame](#PyGame)
    - [Pywavefront](#PyWavefront)
 2. [What is a VAO (Vertex Array Object)?](#VAO)
-3. [What is a VBO?](#VBO)
+3. [What is a VBO? (Vertex Buffer Object)](#VBO)
 4. [Classes](#Classes)
    - [Camera](#Camera)
    - [GraphicsEngine](#GraphicsEngine)
@@ -194,7 +194,7 @@ Creating and using a VAO typically involves the following steps:
 
 # VBO
 
-## What is a VBO?
+## What is a VBO? (Vertex Buffer Object)
 A Vertex Buffer Object (VBO) is an OpenGL buffer object that stores vertex data, such as vertex coordinates, colors, normals, and texture coordinates, on the GPU. VBOs provide a more efficient and flexible way to manage vertex data compared to traditional immediate mode rendering.
 
 ## Key Concepts
