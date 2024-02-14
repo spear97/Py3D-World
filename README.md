@@ -549,7 +549,7 @@ The `Texture` class is responsible for managing textures in the graphics applica
 
 This guide explains how to download and install the latest version of the application from the release section of our GitHub repository.
 
-1. **Navigate to Releases Page:** Visit the [Releases](https://github.com/spear97/repository/releases) page of our GitHub repository. You can find the link to the Releases page in the repository's main menu.
+1. **Navigate to Releases Page:** Visit the [Releases](https://github.com/spear97/Py3D-World/releases) page of our GitHub repository. You can find the link to the Releases page in the repository's main menu.
 2. **Select a Release:** Browse the list of releases to find the version of the application you want to download. Releases are typically labeled with version numbers (e.g., v1.0.0).
 3. **Download the Application:** Locate the asset corresponding to the Windows version of the application. This asset usually ends with `.exe`. Click on the asset name to start the download.
 4. **Run the Installer:** Once the download is complete, navigate to the downloaded `.exe` file. Double-click on the file to run the installer.
