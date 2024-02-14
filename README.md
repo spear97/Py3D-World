@@ -115,10 +115,56 @@ pip install pyglm
 - **Shader Support:** Easily create and manage shaders using ModernGL's shader abstraction.
 - **Cross-Platform:** ModernGL works across different platforms, including Windows, macOS, and Linux.
 
-
 ## Numpy
+
+### Installation
+
+You can install NumPy using pip:
+```bash
+pip install numpy
+```
+### Features
+
+- **Multi-dimensional Arrays:** NumPy provides a powerful N-dimensional array object (`numpy.ndarray`) that can represent arrays of any dimensionality.
+- **Efficient Operations:** NumPy allows for efficient mathematical operations on arrays, such as element-wise operations, linear algebra operations, and statistical computations.
+- **Broadcasting:** NumPy's broadcasting feature enables arithmetic operations between arrays with different shapes and sizes, making it easier to write vectorized code.
+- **Integration with Other Libraries:** NumPy seamlessly integrates with other Python libraries such as SciPy, Pandas, and Matplotlib, facilitating advanced data analysis and visualization tasks.
+
 ## PyGame
+
+PyGame is a cross-platform set of Python modules designed for writing video games. It provides functionality for handling game graphics, sound, and user input, making it an excellent choice for beginners and experienced developers alike.
+
+### Installation
+
+You can install PyGame using pip:
+
+```bash
+pip install pygame
+```
+
+### Features
+- **Graphics Rendering:** PyGame offers a range of tools for displaying graphics, including images, shapes, and text, making it easy to create interactive visuals for your games.
+- **Input Handling:** PyGame simplifies the process of handling user input events such as keyboard presses, mouse clicks, and joystick movements.
+- **Audio Support:** PyGame allows you to load and play sounds in various formats, providing options for adding background music, sound effects, and more to your games.
+- **Game Development Utilities:** PyGame includes useful utilities for game development, such as collision detection, sprite management, and animation capabilities.
+
 ## PyWavefront
+
+PyWavefront is a simple Python library for parsing Wavefront .obj files. It allows you to load 3D models from .obj files into your Python applications, making it suitable for use in graphics rendering, game development, and simulation projects.
+
+### Installation
+
+You can install PyWavefront using pip:
+
+```bash
+pip install pywavefront
+```
+
+### Features
+- **Support for Wavefront .obj Files:** PyWavefront provides functionality for parsing Wavefront .obj files, including vertices, normals, texture coordinates, and faces.
+- **Flexible Model Loading:** PyWavefront allows you to load 3D models from .obj files into Python data structures, making it easy to manipulate and render them in your applications.
+- **Customizable Parsing:** PyWavefront supports customizable parsing options, allowing you to control how .obj files are processed and loaded.
+- **Lightweight and Easy to Use:** PyWavefront is designed to be lightweight and easy to use, with a simple API that makes it accessible to developers of all skill levels.
    
 # Classes
 
