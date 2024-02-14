@@ -15,8 +15,8 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
    - [Numpy](#Numpy)
    - [PyGame](#PyGame)
    - [Pywavefront](#PyWavefront)
-2. What is a VAO (Vertex Array Object)?
-3. What is a VBO?
+2. [What is a VAO (Vertex Array Object)?](#VAO)
+3. [What is a VBO?](#VBO)
 4. [Classes](#Classes)
    - [Camera](#Camera)
    - [GraphicsEngine](#GraphicsEngine)
