@@ -15,7 +15,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
    - [Numpy](#Numpy)
    - [PyGame](#PyGame)
    - [Pywavefront](#PyWavefront)
-2. What is a VAO?
+2. What is a VAO (Vertex Array Object)?
 3. What is a VBO?
 4. [Classes](#Classes)
    - [Camera](#Camera)
@@ -164,6 +164,62 @@ pip install pywavefront
 - **Customizable Parsing:** PyWavefront supports customizable parsing options, allowing you to control how .obj files are processed and loaded.
 - **Lightweight and Easy to Use:** PyWavefront is designed to be lightweight and easy to use, with a simple API that makes it accessible to developers of all skill levels.
    
+# VAO
+
+## What is a VAO?
+A Vertex Array Object (VAO) is an OpenGL object that encapsulates multiple vertex buffer objects (VBOs) and vertex attribute configurations. It serves as a container for vertex attribute state and allows for efficient rendering of vertex data.
+
+## Key Concepts
+
+- **Encapsulation of Vertex Attribute State:** A VAO stores the configuration of vertex attributes such as position, color, normal, and texture coordinates.
+- **Reduces State Changes:** By binding a VAO before rendering, OpenGL automatically applies the vertex attribute configuration stored in the VAO, reducing the need for redundant state changes.
+- **Efficient Rendering:** VAOs help improve rendering performance by reducing the number of function calls required to set up vertex attribute state during rendering.
+- **Support for Multiple VBOs:** A single VAO can reference multiple VBOs, allowing for the efficient management of vertex data for complex geometry.
+
+## Usage
+
+Creating and using a VAO typically involves the following steps:
+
+1. **Create a VAO:** Generate a new VAO object using `glGenVertexArrays()`.
+
+2. **Bind the VAO:** Bind the VAO using `glBindVertexArray()` to specify the current VAO.
+
+3. **Set up Vertex Attribute Pointers:** Configure vertex attribute pointers using `glVertexAttribPointer()` to define how vertex data is organized.
+
+4. **Enable Vertex Attributes:** Enable the vertex attributes using `glEnableVertexAttribArray()`.
+
+5. **Bind Associated VBOs:** Bind the vertex buffer objects (VBOs) containing vertex data using `glBindBuffer()`.
+
+6. **Draw:** Issue draw calls to render the geometry associated with the VAO.
+
+# VBO
+
+## What is a VBO?
+A Vertex Buffer Object (VBO) is an OpenGL buffer object that stores vertex data, such as vertex coordinates, colors, normals, and texture coordinates, on the GPU. VBOs provide a more efficient and flexible way to manage vertex data compared to traditional immediate mode rendering.
+
+## Key Concepts
+
+- **Efficient Data Storage:** VBOs store vertex data in GPU memory, allowing for faster data access and rendering compared to storing data in system memory.
+- **Reduced CPU Overhead:** By transferring vertex data to the GPU once and using it multiple times for rendering, VBOs reduce the CPU overhead associated with sending vertex data to the GPU for each frame.
+- **Dynamic Data Streaming:** VBOs support dynamic data streaming, allowing for efficient updates to vertex data without the need to re-upload the entire buffer.
+- **Support for Multiple Data Formats:** VBOs can store vertex data in various formats, including interleaved or separate arrays, enabling flexibility in organizing and accessing vertex attributes.
+
+## Usage
+
+Creating and using a VBO typically involves the following steps:
+
+1. **Generate a VBO:** Create a new VBO object using `glGenBuffers()`.
+
+2. **Bind the VBO:** Bind the VBO using `glBindBuffer()` to specify the current VBO.
+
+3. **Allocate Memory:** Allocate memory for the vertex data using `glBufferData()` or `glBufferSubData()`.
+
+4. **Fill the VBO with Data:** Fill the VBO with vertex data using `glBufferData()` or update existing data using `glBufferSubData()`.
+
+5. **Bind the VBO for Rendering:** Bind the VBO before rendering to specify the vertex data source.
+
+6. **Use the VBO for Rendering:** Render the geometry associated with the VBO using draw calls such as `glDrawArrays()` or `glDrawElements()`.
+
 # Classes
 
 ## GraphicsEngine
