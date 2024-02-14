@@ -10,13 +10,11 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 ## Table of Contents
 
 1. Dependencies
-   - PyGLM
-   - Moderngl
-   - Numpy
-   - PyGame
-   - Pywavefront
-   - Random
-   - System
+   - [PyGLM](#PyGLM)
+   - [Moderngl](#ModernGl)
+   - [Numpy](#Numpy)
+   - [PyGame](#PyGame)
+   - [Pywavefront](#PyWavefront)
 2. What is a VAO?
 3. What is a VBO?
 4. [Classes](#Classes)
