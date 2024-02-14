@@ -72,7 +72,8 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
       - [TreeTrunkVBO](#TreeTrunkVBO)
       - [TreeVBO](#TreeVBO)
       - [VBO](#VBO)
-      - [SkyboxVBO](#SkyboxVBO)                   
+      - [SkyboxVBO](#SkyboxVBO)
+   5. [How to Download Program?](#Installation)
 # Dependencies
 
 ## PyGLM
@@ -543,3 +544,20 @@ The `Texture` class is responsible for managing textures in the graphics applica
 - **Creating 2D Texture:** The get_texture method creates and configures a regular 2D texture. It loads the texture from a file, flips it, and configures properties such as mipmaps and anisotropic filtering.
 
 - **Destroy Method:** The destroy method is responsible for releasing resources associated with all loaded textures. It iterates over the textures in the dictionary and calls the release method to free up OpenGL resources.
+
+# Installation
+
+This guide explains how to download and install the latest version of the application from the release section of our GitHub repository.
+
+1. **Navigate to Releases Page:** Visit the [Releases](https://github.com/spear97/repository/releases) page of our GitHub repository. You can find the link to the Releases page in the repository's main menu.
+2. **Select a Release:** Browse the list of releases to find the version of the application you want to download. Releases are typically labeled with version numbers (e.g., v1.0.0).
+3. **Download the Application:** Locate the asset corresponding to the Windows version of the application. This asset usually ends with `.exe`. Click on the asset name to start the download.
+4. **Run the Installer:** Once the download is complete, navigate to the downloaded `.exe` file. Double-click on the file to run the installer.
+5. **Follow Installation Prompts:** Follow the on-screen prompts to install the application. You may need to specify the installation directory and agree to the terms and conditions.
+6. **Launch the Application:** After installation, you can launch the application by:
+   - Finding its shortcut in the Start menu or desktop.
+   - Searching for the application name in the Start menu search bar.
+   - Double-clicking on the application executable in the installation directory.
+
+## Feedback and Support
+If you encounter any issues during the download or installation process, or if you have any questions or feedback about the application, please don't hesitate to [open an issue](https://github.com/spear97/repository/issues) on our GitHub repository. Our team is here to help!
