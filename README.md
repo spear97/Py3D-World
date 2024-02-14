@@ -81,7 +81,7 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 a Python extension module that provides a simple, concise interface to the OpenGL Mathematics (GLM) library. It allows developers to perform mathematical operations commonly used in computer graphics and game development with ease and efficiency.
 
-## Installation
+### Installation
 
 You can install PyGLM using pip:
 
@@ -89,7 +89,7 @@ You can install PyGLM using pip:
 pip install pyglm
 ```
 
-## Features
+### Features
 
 - **Vector and Matrix Operations:** Perform common vector and matrix operations such as addition, subtraction, multiplication, and transformation.
 - **Quaternion Operations:** Manipulate quaternions for orientation and rotation calculations.
@@ -100,7 +100,7 @@ pip install pyglm
 
 ModernGL is a Python wrapper for OpenGL that simplifies the process of writing shaders and working with modern OpenGL contexts. It provides a more Pythonic interface compared to raw OpenGL, making it easier to develop graphics applications and games.
 
-## Installation
+### Installation
 
 You can install PyGLM using pip:
 
@@ -108,7 +108,7 @@ You can install PyGLM using pip:
 pip install pyglm
 ```
 
-## Features
+### Features
 
 - **Simplified OpenGL Development:** ModernGL abstracts away much of the complexity of OpenGL, allowing developers to focus on writing shaders and high-level code.
 - **Efficient Rendering:** ModernGL provides efficient rendering through the use of modern OpenGL features and optimizations.
