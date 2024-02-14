@@ -560,4 +560,4 @@ This guide explains how to download and install the latest version of the applic
    - Double-clicking on the application executable in the installation directory.
 
 ## Feedback and Support
-If you encounter any issues during the download or installation process, or if you have any questions or feedback about the application, please don't hesitate to [open an issue](https://github.com/spear97/repository/issues) on our GitHub repository. Our team is here to help!
+If you encounter any issues during the download or installation process, or if you have any questions or feedback about the application, please don't hesitate to [open an issue](https://github.com/spear97/Py3D-World/issues) on our GitHub repository. Our team is here to help!
