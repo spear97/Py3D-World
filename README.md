@@ -78,11 +78,23 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 # Dependencies
 
 ## PyGLM
+
+a Python extension module that provides a simple, concise interface to the OpenGL Mathematics (GLM) library. It allows developers to perform mathematical operations commonly used in computer graphics and game development with ease and efficiency.
+
+## Installation
+
+You can install PyGLM using pip:
+
 ```bash
 pip install pyglm
 ```
 
-a Python extension module that provides a simple, concise interface to the OpenGL Mathematics (GLM) library. It allows developers to perform mathematical operations commonly used in computer graphics and game development with ease and efficiency.
+## Features
+
+- **Vector and Matrix Operations:** Perform common vector and matrix operations such as addition, subtraction, multiplication, and transformation.
+- **Quaternion Operations:** Manipulate quaternions for orientation and rotation calculations.
+- **Support for Various Data Types:** PyGLM supports different data types including single and double-precision floating-point numbers, integers, and booleans.
+- **Easy Integration:** Seamlessly integrate PyGLM into your existing Python projects without complex setup procedures.
 
 ## ModernGl
 ## Numpy
