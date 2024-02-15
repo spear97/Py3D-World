@@ -11,6 +11,8 @@ This project serves to illustrate how to render a 3D-Textured, Environment Engin
 
 ![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot4.png) 
 
+![Custom Screenshot](https://github.com/spear97/Py3D-World/blob/main/3D%20World/Screenshots/Screenshot1.png) 
+
 ## Table of Contents
 
 1. Dependencies
