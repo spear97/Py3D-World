@@ -111,10 +111,10 @@ ModernGL is a Python wrapper for OpenGL that simplifies the process of writing s
 
 ### Installation
 
-You can install PyGLM using pip:
+You can install ModernGL using pip:
 
 ```bash
-pip install pyglm
+pip install moderngl
 ```
 
 ### Features
